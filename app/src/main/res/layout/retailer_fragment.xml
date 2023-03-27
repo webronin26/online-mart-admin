@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.webronin_26.online_mart_admin.retailer.RetailerViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".retailer.RetailerFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="商家資訊"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="公司名稱" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_name"
+                android:text="@{viewmodel.retailerName}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="20dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="負責人" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_responsible_person"
+                android:text="@{viewmodel.retailerResponsiblePerson}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="統一編號" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_invoice"
+                android:text="@{viewmodel.retailerInvoice}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="銀行帳號" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_remittance_account"
+                android:text="@{viewmodel.retailerRemittanceAccount}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="公司電話" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_office_phone"
+                android:text="@{viewmodel.retailerOfficePhone}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="聯絡人電話" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_personal_phone"
+                android:text="@{viewmodel.retailerPersonalPhone}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="公司地址" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_office_address"
+                android:text="@{viewmodel.retailerOfficeAddress}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="通訊地址" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_correspondence_address"
+                android:text="@{viewmodel.retailerCorrespondenceAddress}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="運費" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/retailer_fragment_text_view_delivery_fee"
+                app:set_text_view_float="@{viewmodel.retailerDeliveryFee}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginBottom="30dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/retailer_fragment_cancel_button"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="確認"
+                android:textSize="30sp"
+                android:background="@drawable/white_rounded_corner"
+                android:layout_weight="1"
+                android:layout_margin="20dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

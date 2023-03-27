@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.webronin_26.online_mart_admin.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" />
+
+    <fragment
+        android:id="@+id/add_retailer_fragment"
+        android:name="com.webronin_26.online_mart_admin.add_retailer.AddRetailerFragment"
+        android:label="add_retailer_fragment"
+        tools:layout="@layout/add_retailer_fragment" >
+        <action
+            android:id="@+id/action_add_retailer_fragment_to_main_fragment"
+            app:destination="@id/main_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/retailer_list_fragment"
+        android:name="com.webronin_26.online_mart_admin.retailer_list.RetailerListFragment"
+        android:label="retailer_list_fragment"
+        tools:layout="@layout/retailer_list_fragment" >
+        <action
+            android:id="@+id/action_retailer_list_fragment_to_retailer_fragment"
+            app:destination="@id/retailer_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/logout_fragment"
+        android:name="com.webronin_26.online_mart_admin.logout.LogoutFragment"
+        android:label="logout_fragment"
+        tools:layout="@layout/logout_fragment" >
+        <action
+            android:id="@+id/action_logout_fragment_to_main_fragment"
+            app:destination="@id/main_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/retailer_fragment"
+        android:name="com.webronin_26.online_mart_admin.retailer.RetailerFragment"
+        android:label="RetailerFragment" >
+        <action
+            android:id="@+id/action_retailer_fragment_to_retailer_list_fragment"
+            app:destination="@id/retailer_list_fragment" />
+    </fragment>
+</navigation>
