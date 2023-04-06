@@ -19,6 +19,12 @@ kotlin / MVVM / compose / jetpack (livedata, coroutine, databinding, navigation.
 <br><br>compose ui 參考：
 https://www.boltuix.com/2022/07/compose-authentication-app-ui-ux.html
 
+## screen shot
+
+![](side.png)
+![](retailer_list.png)
+![](add_retailer.png)
+
 ## 本專案包含的功能
 
 |一般用戶|
